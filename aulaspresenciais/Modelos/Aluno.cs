@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleView
+namespace Modelos
 {
-    class Aluno
+    public class Aluno
     {
        public string nome { get; set; }
        public int matricula { get; set; }

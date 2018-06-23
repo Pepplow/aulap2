@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelos;
+using Controller;
 
 namespace ConsoleView
 {
@@ -12,6 +14,22 @@ namespace ConsoleView
         {
             Aluno a = CadastrarAluno();
             ImprimirDados(a);
+            //Cadastrar Alunos
+            AlunosController alunoscontroller = new AlunosController();
+            alunoscontroller.inserir(a);
+
+            
+            Aluno b = CadastrarAluno();
+            alunoscontroller.inserir(b);
+            Aluno c = CadastrarAluno();
+            alunoscontroller.inserir(c);
+
+            foreach(Aluno aluno in alunoscontroller.ListarTodos())
+            {
+                ImprimirDados(aluno);
+            }
+
+
 
             Console.ReadKey();
         }
