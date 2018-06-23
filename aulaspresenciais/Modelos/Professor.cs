@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    class Professor
+    public class Professor
     {
-        public string nome { get; set; }
-        public int matricula { get; set; }
+        public string nomep { get; set; }
+        public int matriculap { get; set; }
     }
 }
