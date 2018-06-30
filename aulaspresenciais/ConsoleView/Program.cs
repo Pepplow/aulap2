@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,9 @@ namespace ConsoleView
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS E PROFESSORES----------------------------\n");
+            
+      
+            Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS, PROFESSORES E DISCIPLINAS----------------------------\n");
 
             //Cadastrar Alunos
             AlunosController alunoscontroller = new AlunosController();
@@ -34,7 +36,7 @@ namespace ConsoleView
             Console.Clear();
 
 
-            Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS E PROFESSORES----------------------------\n");
+            Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS, PROFESSORES E DISCIPLINAS----------------------------\n");
             //Cadastrar Professor
 
             ProfessorController professorcontroller = new ProfessorController();
@@ -52,18 +54,47 @@ namespace ConsoleView
             Console.WriteLine("\n-Insira o Terceiro Professor-");
             Professor f = CadastrarProfessor();
             professorcontroller.inserir(f);
+            Console.Clear();
 
-            //Imprimindo Dados            
+            //Cadastrar Disciplina
+            Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS, PROFESSORES E DISCIPLINAS----------------------------\n");
+
+            DisciplinaController disciplinaController = new DisciplinaController();
+
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Cadastro de Disciplinas");
+            Console.WriteLine("-------------------------");
+
+            Console.WriteLine("-Insira a Primeira Disciplina-");
+            Disciplina g = CadastrarDisciplina();
+            disciplinaController.inserir(g);
+
+            Console.WriteLine("-Insira a Segunda Disciplina-");
+            Disciplina h = CadastrarDisciplina();
+            disciplinaController.inserir(h);
+
+
+
+            //Imprimindo Dados Aluno           
             Console.Clear();
             Console.WriteLine("Segue abaixo a lista de 'alunos' cadastrados");
             foreach (Aluno aluno in alunoscontroller.ListarTodos())
             {
                 ImprimirDados(aluno);
             }
+            //Imprimindo Dados Professor
+            
             Console.WriteLine("\nSegue abaixo a lista de 'Professores' cadastrados");
             foreach (Professor professor in professorcontroller.ListarTodos())
             {
                 ImprimirDadosP(professor);
+            }
+            //Imprimindo Dados Disciplina
+            
+            Console.WriteLine("\nSegue abaixo a lista de 'Disciplinas' cadastradas");
+            foreach (Disciplina disciplina in disciplinaController.ListarTodos())
+            {
+                ImprimirDadosD(disciplina);
             }
 
             Console.ReadKey();
@@ -79,6 +110,12 @@ namespace ConsoleView
         {
             Console.WriteLine("\nProfessor : " + d.nomep);
             Console.WriteLine("Matricula: " + d.matriculap);
+        }
+
+        private static void ImprimirDadosD(Disciplina g)
+        {
+            Console.WriteLine("\nProfessor : " + g.id);
+            Console.WriteLine("Matricula: " + g.nome);
         }
 
         private static Aluno CadastrarAluno()
@@ -101,6 +138,24 @@ namespace ConsoleView
             Console.Write("Digite a matricula do Professor: ");
             d.matriculap = int.Parse(Console.ReadLine());
             return d;
+        } 
+        
+        private static Disciplina CadastrarDisciplina()
+        {
+            Disciplina g = new Disciplina();
+     
+            Console.Write("Digite o id da Disciplina: ");
+            g.id = int.Parse(Console.ReadLine());
+            Console.Write("Digite o nome da disciplina: ");
+            g.nome = Console.ReadLine();
+            return g;
+
+
+
         }
-    }
+
+        
+         }
+        
 }
+    
