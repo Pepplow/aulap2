@@ -20,5 +20,9 @@ namespace Controller
         {
             return TabelaProfessor; 
         }
+        public void DeleteP(Professor a)
+        {
+            TabelaProfessor.Remove(a);
+        }
     }
 }

@@ -15,29 +15,29 @@ namespace ConsoleView
         {
 
 
+            //Cadastrar Alunos
             Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS, PROFESSORES E DISCIPLINAS----------------------------\n");
 
-            //Cadastrar Alunos
             AlunosController alunoscontroller = new AlunosController();
 
             Console.WriteLine("----------------------");
             Console.WriteLine("Cadastro de Alunos");
             Console.WriteLine("----------------------");
 
-            Console.WriteLine("-Insira o Primeiro Aluno-");
+            Console.WriteLine("-Insira o Primeiro Aluno-\n");
             Aluno a = CadastrarAluno();
             alunoscontroller.inserir(a);
-            Console.WriteLine("\n-Insira o Segundo Aluno-");
+            Console.WriteLine("\n-Insira o Segundo Aluno-\n");
             Aluno b = CadastrarAluno();
             alunoscontroller.inserir(b);
-            Console.WriteLine("\n-Insira o Terceiro Aluno-");
+            Console.WriteLine("\n-Insira o Terceiro Aluno-\n");
             Aluno c = CadastrarAluno();
             alunoscontroller.inserir(c);
             Console.Clear();
 
 
-            Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS, PROFESSORES E DISCIPLINAS----------------------------\n");
             //Cadastrar Professor
+            Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS, PROFESSORES E DISCIPLINAS----------------------------\n");
 
             ProfessorController professorcontroller = new ProfessorController();
 
@@ -96,33 +96,34 @@ namespace ConsoleView
             {
                 ImprimirDadosD(disciplina);
             }*/
-            //deletar aluno
+            
+            //MENU DE OPÇÕES ,LISTAR E DELETE
             Console.Clear();
             int opcao;
             do
             {
+
                 Console.WriteLine("--------------------MENU DE OPÇÔES-------------");
-                Console.WriteLine("1 - Deletar o Aluno na primeira posição", a);
-                Console.WriteLine("2 - Deletar o Aluno na Segunda posição", b);
-                Console.WriteLine("3 - Deletar o Aluno na Terceira posição", c);
-                Console.WriteLine("4 - Para listar 'Alunos'");
-                Console.WriteLine("5 - Para listar 'Professores'");
-                Console.WriteLine("6 - Para listar 'Disciplinas'");
-                Console.WriteLine("0 - Para Finalizar");
+                Console.WriteLine("0 - Para listar 'Alunos'");
+                Console.WriteLine("1 - Deletar o Aluno na primeira posição");
+                Console.WriteLine("2 - Deletar o Aluno na Segunda posição");
+                Console.WriteLine("3 - Deletar o Aluno na Terceira posição");
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine("4 - Para listar 'Professores'");
+                Console.WriteLine("41 - Deletar o Professor na primeira posição");
+                Console.WriteLine("42 - Deletar o Professor na Segunda posição");
+                Console.WriteLine("43 - Deletar o Professor na Terceira posição");
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine("5 - Para listar 'Disciplinas'");
+                Console.WriteLine("51 - Deletar o Professor na primeira posição");
+                Console.WriteLine("52 - Deletar o Professor na Segunda posição");
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine("171 - Para Finalizar");
                 Console.WriteLine("Digite a opção que deseja: ");
                 opcao = Int32.Parse(Console.ReadLine());
                 switch (opcao)
                 {
-                    case 1:
-                        alunoscontroller.Delete(a);                        
-                        break;
-                    case 2:
-                        alunoscontroller.Delete(b);                       
-                        break;
-                    case 3:
-                        alunoscontroller.Delete(c);                        
-                        break;
-                    case 4:
+                    case 0:
                         Console.Clear();
                         Console.WriteLine("-----ALUNOS CADASTRADOS------");
                         Console.WriteLine("Sua lista de alunos foi Atualizada!");
@@ -132,7 +133,16 @@ namespace ConsoleView
                         }
                         Console.WriteLine("\nAperte 'Enter' Para Voltar ao Menu!");
                         break;
-                    case 5:
+                    case 1:
+                        alunoscontroller.Delete(a);                       
+                        break;
+                    case 2:
+                        alunoscontroller.Delete(b);                        
+                        break;
+                    case 3:
+                        alunoscontroller.Delete(c);
+                        break;
+                    case 4:
                         Console.Clear();
                         Console.WriteLine("\n-------PROFESSORES CADASTRADOS-------");
                         foreach (Professor professor in professorcontroller.ListarTodos())
@@ -141,7 +151,16 @@ namespace ConsoleView
                         }
                         Console.WriteLine("\nAperte 'Enter' Para Voltar ao Menu!");
                         break;
-                    case 6:
+                    case 41:
+                        professorcontroller.DeleteP(d);                   
+                        break;
+                    case 42:
+                        professorcontroller.DeleteP(e);
+                        break;
+                    case 43:
+                        professorcontroller.DeleteP(f);
+                        break;
+                    case 5:
                         Console.Clear();
                         Console.WriteLine("\n-------DISCIPLINAS CADASTRADaS-------");
                         foreach (Disciplina disciplina in disciplinaController.ListarTodos())
@@ -150,11 +169,17 @@ namespace ConsoleView
                         }
                         Console.WriteLine("\nAperte 'Enter' Para Voltar ao Menu!");
                         break;
+                    case 51:
+                        disciplinaController.DeleteD(g);
+                        break;
+                    case 52:
+                        disciplinaController.DeleteD(h);
+                        break;
                 }
                 Console.ReadKey();
                 Console.Clear();
 
-            } while (opcao != 0);
+            } while (opcao != 171);
 
             foreach (Aluno aluno in alunoscontroller.ListarTodos())
             {

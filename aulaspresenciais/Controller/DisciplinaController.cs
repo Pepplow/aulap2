@@ -19,5 +19,9 @@ namespace Controller
         {
             return TabelaDisciplina;
         }
+        public void DeleteD(Disciplina a)
+        {
+            TabelaDisciplina.Remove(a);
+        }
     }
 }
