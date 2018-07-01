@@ -13,8 +13,8 @@ namespace ConsoleView
     {
         static void Main(string[] args)
         {
-            
-      
+
+
             Console.WriteLine("-----------------------------LISTA DE CADASTRO DE ALUNOS, PROFESSORES E DISCIPLINAS----------------------------\n");
 
             //Cadastrar Alunos
@@ -75,53 +75,119 @@ namespace ConsoleView
 
 
 
-            //Imprimindo Dados Aluno           
+            /*Imprimindo Dados Aluno           
             Console.Clear();
-            Console.WriteLine("Segue abaixo a lista de 'alunos' cadastrados");
+            Console.WriteLine("-----ALUNOS CADASTRADOS------");
             foreach (Aluno aluno in alunoscontroller.ListarTodos())
             {
                 ImprimirDados(aluno);
             }
             //Imprimindo Dados Professor
-            
-            Console.WriteLine("\nSegue abaixo a lista de 'Professores' cadastrados");
+
+            Console.WriteLine("\n-------PROFESSORES CADASTRADOS-------");
             foreach (Professor professor in professorcontroller.ListarTodos())
             {
                 ImprimirDadosP(professor);
             }
             //Imprimindo Dados Disciplina
-            
-            Console.WriteLine("\nSegue abaixo a lista de 'Disciplinas' cadastradas");
+
+            Console.WriteLine("\n------DISCIPLINAS CADASTRADAS-------");
             foreach (Disciplina disciplina in disciplinaController.ListarTodos())
             {
                 ImprimirDadosD(disciplina);
+            }*/
+            //deletar aluno
+            Console.Clear();
+            int opcao;
+            do
+            {
+                Console.WriteLine("--------------------MENU DE OPÇÔES-------------");
+                Console.WriteLine("1 - Deletar o Aluno na primeira posição", a);
+                Console.WriteLine("2 - Deletar o Aluno na Segunda posição", b);
+                Console.WriteLine("3 - Deletar o Aluno na Terceira posição", c);
+                Console.WriteLine("4 - Para listar 'Alunos'");
+                Console.WriteLine("5 - Para listar 'Professores'");
+                Console.WriteLine("6 - Para listar 'Disciplinas'");
+                Console.WriteLine("0 - Para Finalizar");
+                Console.WriteLine("Digite a opção que deseja: ");
+                opcao = Int32.Parse(Console.ReadLine());
+                switch (opcao)
+                {
+                    case 1:
+                        alunoscontroller.Delete(a);                        
+                        break;
+                    case 2:
+                        alunoscontroller.Delete(b);                       
+                        break;
+                    case 3:
+                        alunoscontroller.Delete(c);                        
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Console.WriteLine("-----ALUNOS CADASTRADOS------");
+                        Console.WriteLine("Sua lista de alunos foi Atualizada!");
+                        foreach (Aluno aluno in alunoscontroller.ListarTodos())
+                        {
+                            ImprimirDados(aluno);
+                        }
+                        Console.WriteLine("\nAperte 'Enter' Para Voltar ao Menu!");
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Console.WriteLine("\n-------PROFESSORES CADASTRADOS-------");
+                        foreach (Professor professor in professorcontroller.ListarTodos())
+                        {
+                            ImprimirDadosP(professor);
+                        }
+                        Console.WriteLine("\nAperte 'Enter' Para Voltar ao Menu!");
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Console.WriteLine("\n-------DISCIPLINAS CADASTRADaS-------");
+                        foreach (Disciplina disciplina in disciplinaController.ListarTodos())
+                        {
+                            ImprimirDadosD(disciplina);
+                        }
+                        Console.WriteLine("\nAperte 'Enter' Para Voltar ao Menu!");
+                        break;
+                }
+                Console.ReadKey();
+                Console.Clear();
+
+            } while (opcao != 0);
+
+            foreach (Aluno aluno in alunoscontroller.ListarTodos())
+            {
+                ImprimirDados(aluno);
             }
 
-            Console.ReadKey();
+
+
+          
         }
 
         private static void ImprimirDados(Aluno a)
         {
-            Console.WriteLine("\nAluno : " + a.nome);
+            Console.WriteLine("\nAluno: " + a.nome);
             Console.WriteLine("Matricula: " + a.matricula);
+            
         }
 
         private static void ImprimirDadosP(Professor d)
         {
-            Console.WriteLine("\nProfessor : " + d.nomep);
+            Console.WriteLine("\nProfessor: " + d.nomep);
             Console.WriteLine("Matricula: " + d.matriculap);
         }
 
         private static void ImprimirDadosD(Disciplina g)
         {
-            Console.WriteLine("\nProfessor : " + g.id);
-            Console.WriteLine("Matricula: " + g.nome);
+            Console.WriteLine("\nID:  " + g.id);
+            Console.WriteLine("Disciplina: " + g.nome);
         }
 
         private static Aluno CadastrarAluno()
         {
             Aluno a = new Aluno();
-
             Console.Write("Digite o nome do aluno: ");
             a.nome = Console.ReadLine();
             Console.Write("Digite a matricula do aluno: ");
@@ -132,7 +198,6 @@ namespace ConsoleView
         private static Professor CadastrarProfessor()
         {
             Professor d = new Professor();
-
             Console.Write("Digite o nome do Professor: ");
             d.nomep = Console.ReadLine();
             Console.Write("Digite a matricula do Professor: ");
@@ -143,17 +208,15 @@ namespace ConsoleView
         private static Disciplina CadastrarDisciplina()
         {
             Disciplina g = new Disciplina();
-     
             Console.Write("Digite o id da Disciplina: ");
             g.id = int.Parse(Console.ReadLine());
             Console.Write("Digite o nome da disciplina: ");
             g.nome = Console.ReadLine();
             return g;
 
-
-
         }
 
+       
         
          }
         

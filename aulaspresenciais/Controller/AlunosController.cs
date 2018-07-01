@@ -19,5 +19,9 @@ namespace Controller
         {
             return TabelaAlunos;
         }
+        public void Delete(Aluno a)
+        {
+            TabelaAlunos.Remove(a);
+        }
     }
 }
