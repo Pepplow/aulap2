@@ -1,4 +1,5 @@
-﻿using Modelos;
+﻿using Controller.DAL;
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,46 @@ namespace Controller
 {
     public class AlunosController
     {
-        List<Aluno> TabelaAlunos = new List<Aluno>();
+        Contexto contexto = new Contexto();
+        //List<Aluno> TabelaAlunos = new List<Aluno>();
 
-        public void inserir(Aluno a)
+        public void inserir(Aluno novoAluno)
         {
-            TabelaAlunos.Add(a);
+            contexto.Alunos.Add(novoAluno);
+            contexto.SaveChanges();
+            //TabelaAlunos.Add(a);
         }
+
         public List<Aluno> ListarTodos()
         {
-            return TabelaAlunos;
+            return contexto.Alunos.ToList();
         }
-        public void Delete(Aluno a)
+
+        public Aluno BuscarPorMatricula(int matricula)
         {
-            TabelaAlunos.Remove(a);
+            var aluno = (Aluno)from a in contexto.Alunos
+                                 where a.Matricula == matricula
+                                 select a;
+            return (Aluno)aluno;
         }
+
+        public Aluno BuscarPorID(int AlunoID)
+        {
+            return contexto.Alunos.Find(AlunoID);
+        }
+
+        public void Atualizar(Aluno aluno)
+        {
+            contexto.Entry(aluno).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
+        }
+
+        public void Excluir(int AlunoID)
+        {
+            Aluno aluno = BuscarPorID(AlunoID);
+            contexto.Alunos.Remove(aluno);
+            contexto.SaveChanges();
+        }
+     
     }
 }
