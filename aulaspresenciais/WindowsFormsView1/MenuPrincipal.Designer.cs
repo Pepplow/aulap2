@@ -34,9 +34,13 @@
             this.btnListarAluno = new System.Windows.Forms.Button();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCadastrarprofessor = new System.Windows.Forms.Button();
+            this.btnCadastrarP = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnCadastrarDD = new System.Windows.Forms.Button();
+            this.btnListarD = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -94,7 +98,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnCadastrarprofessor);
+            this.groupBox2.Controls.Add(this.btnCadastrarP);
             this.groupBox2.Location = new System.Drawing.Point(110, 30);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(90, 225);
@@ -102,20 +106,53 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Professor";
             // 
-            // btnCadastrarprofessor
+            // btnCadastrarP
             // 
-            this.btnCadastrarprofessor.Location = new System.Drawing.Point(7, 39);
-            this.btnCadastrarprofessor.Name = "btnCadastrarprofessor";
-            this.btnCadastrarprofessor.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrarprofessor.TabIndex = 0;
-            this.btnCadastrarprofessor.Text = "Cadastrar";
-            this.btnCadastrarprofessor.UseVisualStyleBackColor = true;
+            this.btnCadastrarP.Location = new System.Drawing.Point(7, 39);
+            this.btnCadastrarP.Name = "btnCadastrarP";
+            this.btnCadastrarP.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarP.TabIndex = 0;
+            this.btnCadastrarP.Text = "Cadastrar";
+            this.btnCadastrarP.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCadastrarP.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnListarD);
+            this.groupBox3.Controls.Add(this.btnCadastrarDD);
+            this.groupBox3.Location = new System.Drawing.Point(206, 30);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(86, 225);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Disciplina";
+            // 
+            // btnCadastrarDD
+            // 
+            this.btnCadastrarDD.Location = new System.Drawing.Point(6, 38);
+            this.btnCadastrarDD.Name = "btnCadastrarDD";
+            this.btnCadastrarDD.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarDD.TabIndex = 0;
+            this.btnCadastrarDD.Text = "Cadastrar";
+            this.btnCadastrarDD.UseVisualStyleBackColor = true;
+            this.btnCadastrarDD.Click += new System.EventHandler(this.btnCadastrarDD_Click);
+            // 
+            // btnListarD
+            // 
+            this.btnListarD.Location = new System.Drawing.Point(6, 68);
+            this.btnListarD.Name = "btnListarD";
+            this.btnListarD.Size = new System.Drawing.Size(75, 23);
+            this.btnListarD.TabIndex = 1;
+            this.btnListarD.Text = "Listar";
+            this.btnListarD.UseVisualStyleBackColor = true;
+            this.btnListarD.Click += new System.EventHandler(this.btnListarD_Click);
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 485);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuPrincipal";
@@ -123,6 +160,7 @@
             this.Text = "MenuPrincipal";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -135,6 +173,9 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnCadastrarprofessor;
+        private System.Windows.Forms.Button btnCadastrarP;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnCadastrarDD;
+        private System.Windows.Forms.Button btnListarD;
     }
 }

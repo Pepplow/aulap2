@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsView1.TelaDisciplina;
 using WindowsFormsView1.TelaAluno;
 
 
@@ -44,6 +45,16 @@ namespace WindowsFormsView1
             delaluno.Show();
         }
 
+        private void btnCadastrarDD_Click(object sender, EventArgs e)
+        {
+            frmCadastroDisciplina cadd = new frmCadastroDisciplina();
+            cadd.Show();
+        }
 
+        private void btnListarD_Click(object sender, EventArgs e)
+        {
+            frmListaDisciplina listDisc = new frmListaDisciplina();
+            listDisc.Show();
+        }
     }
 }

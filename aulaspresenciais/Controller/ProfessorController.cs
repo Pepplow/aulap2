@@ -13,11 +13,11 @@ namespace Controller
     {
         Contexto contexto = new Contexto();
 
-        public void inserirp(Professor novoProfessor)
+        /*public void inserirp(Professor novoProfessor)
         {
             contexto.Professors.Add(novoProfessor);
             contexto.SaveChanges();
-            //TabelaAlunos.Add(a);
-        }
+            
+        }*/
     }
 }
