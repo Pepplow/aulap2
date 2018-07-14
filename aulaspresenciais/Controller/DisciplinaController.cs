@@ -23,6 +23,18 @@ namespace Controller
             return contexto.Disciplinas.ToList();
         }
 
+        public Disciplina BuscarPorIDD(int Idd)
+        {
+            return contexto.Disciplinas.Find(Idd);
+        }
+
+        public void ExcluirD(int Idd)
+        {
+            Disciplina disciplina = BuscarPorIDD(Idd);
+            contexto.Disciplinas.Remove(disciplina);
+            contexto.SaveChanges();
+        }
+
     }
 
 }

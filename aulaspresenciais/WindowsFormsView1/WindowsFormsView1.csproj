@@ -36,9 +36,11 @@
     <Reference Include="Accessibility" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -98,11 +100,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaDisciplina\ListaDisciplina.cs">
+    <Compile Include="TelaDisciplina\frmDeletarDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaDisciplina\ListaDisciplina.Designer.cs">
-      <DependentUpon>ListaDisciplina.cs</DependentUpon>
+    <Compile Include="TelaDisciplina\frmDeletarDisciplina.Designer.cs">
+      <DependentUpon>frmDeletarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaDisciplina\frmListaDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaDisciplina\frmListaDisciplina.Designer.cs">
+      <DependentUpon>frmListaDisciplina.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="TelaAluno\frmCadastroAluno.resx">
       <DependentUpon>frmCadastroAluno.cs</DependentUpon>
@@ -134,8 +142,11 @@
     <EmbeddedResource Include="TelaDisciplina\frmCadastroDisciplina.resx">
       <DependentUpon>frmCadastroDisciplina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaDisciplina\ListaDisciplina.resx">
-      <DependentUpon>ListaDisciplina.cs</DependentUpon>
+    <EmbeddedResource Include="TelaDisciplina\frmDeletarDisciplina.resx">
+      <DependentUpon>frmDeletarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaDisciplina\frmListaDisciplina.resx">
+      <DependentUpon>frmListaDisciplina.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

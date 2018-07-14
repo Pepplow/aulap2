@@ -12,9 +12,9 @@ using Modelos;
 
 namespace WindowsFormsView1.TelaDisciplina
 {
-    public partial class ListaDisciplina : Form
+    public partial class frmListaDisciplina : Form
     {
-        public ListaDisciplina()
+        public frmListaDisciplina()
         {
             InitializeComponent();
         }

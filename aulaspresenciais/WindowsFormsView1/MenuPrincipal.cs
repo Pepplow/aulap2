@@ -56,5 +56,11 @@ namespace WindowsFormsView1
             frmListaDisciplina listDisc = new frmListaDisciplina();
             listDisc.Show();
         }
+
+        private void btnDeletarDisciplina_Click(object sender, EventArgs e)
+        {
+            frmDeletarDisciplina deldisc = new frmDeletarDisciplina();
+            deldisc.Show();
+        }
     }
 }
