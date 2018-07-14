@@ -23,7 +23,7 @@ namespace WindowsFormsView1.TelaProfessor
         {
             Professor novoProfessor = new Professor();
             novoProfessor.nomep = txtnomep.Text;
-            novoProfessor.cpf = txtCPF.Text;
+            novoProfessor.cpf = int.Parse(txtCPF.Text);
             novoProfessor.matriculap = int.Parse(txtMatriculaP.Text);
 
             ProfessorController professorController = new ProfessorController();

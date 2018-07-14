@@ -61,6 +61,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAlunos);
             this.Name = "frmListaAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaAluno";
             this.Load += new System.EventHandler(this.frmListaAluno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).EndInit();

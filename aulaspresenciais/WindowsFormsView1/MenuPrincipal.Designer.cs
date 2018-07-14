@@ -34,12 +34,13 @@
             this.btnListarAluno = new System.Windows.Forms.Button();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnListarP = new System.Windows.Forms.Button();
             this.btnCadastrarP = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnDeletarDisciplina = new System.Windows.Forms.Button();
             this.btnListarD = new System.Windows.Forms.Button();
             this.btnCadastrarDD = new System.Windows.Forms.Button();
-            this.btnListarP = new System.Windows.Forms.Button();
+            this.btnDeletarP = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnDeletarP);
             this.groupBox2.Controls.Add(this.btnListarP);
             this.groupBox2.Controls.Add(this.btnCadastrarP);
             this.groupBox2.Location = new System.Drawing.Point(110, 30);
@@ -108,6 +110,16 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Professor";
+            // 
+            // btnListarP
+            // 
+            this.btnListarP.Location = new System.Drawing.Point(7, 68);
+            this.btnListarP.Name = "btnListarP";
+            this.btnListarP.Size = new System.Drawing.Size(75, 23);
+            this.btnListarP.TabIndex = 1;
+            this.btnListarP.Text = "Listar";
+            this.btnListarP.UseVisualStyleBackColor = true;
+            this.btnListarP.Click += new System.EventHandler(this.btnListarP_Click);
             // 
             // btnCadastrarP
             // 
@@ -162,15 +174,15 @@
             this.btnCadastrarDD.UseVisualStyleBackColor = true;
             this.btnCadastrarDD.Click += new System.EventHandler(this.btnCadastrarDD_Click);
             // 
-            // btnListarP
+            // btnDeletarP
             // 
-            this.btnListarP.Location = new System.Drawing.Point(7, 68);
-            this.btnListarP.Name = "btnListarP";
-            this.btnListarP.Size = new System.Drawing.Size(75, 23);
-            this.btnListarP.TabIndex = 1;
-            this.btnListarP.Text = "Listar";
-            this.btnListarP.UseVisualStyleBackColor = true;
-            this.btnListarP.Click += new System.EventHandler(this.btnListarP_Click);
+            this.btnDeletarP.Location = new System.Drawing.Point(7, 127);
+            this.btnDeletarP.Name = "btnDeletarP";
+            this.btnDeletarP.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletarP.TabIndex = 2;
+            this.btnDeletarP.Text = "Deletar";
+            this.btnDeletarP.UseVisualStyleBackColor = true;
+            this.btnDeletarP.Click += new System.EventHandler(this.btnDeletarP_Click);
             // 
             // MenuPrincipal
             // 
@@ -204,5 +216,6 @@
         private System.Windows.Forms.Button btnListarD;
         private System.Windows.Forms.Button btnDeletarDisciplina;
         private System.Windows.Forms.Button btnListarP;
+        private System.Windows.Forms.Button btnDeletarP;
     }
 }

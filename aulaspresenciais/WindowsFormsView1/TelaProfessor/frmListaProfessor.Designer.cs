@@ -60,6 +60,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvProfessor);
             this.Name = "frmListaProfessor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaProfessor";
             this.Load += new System.EventHandler(this.frmListaProfessor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfessor)).EndInit();

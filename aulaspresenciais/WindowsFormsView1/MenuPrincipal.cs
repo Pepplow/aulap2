@@ -74,5 +74,11 @@ namespace WindowsFormsView1
             frmListaProfessor listprof = new frmListaProfessor();
             listprof.Show();
         }
+
+        private void btnDeletarP_Click(object sender, EventArgs e)
+        {
+            frmDeletarProfessor delprof = new frmDeletarProfessor();
+            delprof.Show();
+        }
     }
 }

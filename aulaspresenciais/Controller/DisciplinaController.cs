@@ -16,6 +16,7 @@ namespace Controller
         {
             contexto.Disciplinas.Add(novoDisciplina);
             contexto.SaveChanges();
+
         }
 
         public List<Disciplina> ListarTodosD()

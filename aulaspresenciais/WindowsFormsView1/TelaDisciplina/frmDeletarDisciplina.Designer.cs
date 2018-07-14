@@ -91,6 +91,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvdisciplinadel);
             this.Name = "frmDeletarDisciplina";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDeletarDisciplina";
             this.Load += new System.EventHandler(this.frmDeletarDisciplina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdisciplinadel)).EndInit();

@@ -12,7 +12,7 @@ namespace Modelos
         [Key]
         public int IDProfessor { get; set; }
         public string nomep { get; set; }
-        public string cpf { get; set; }
+        public int cpf { get; set; }
         public int matriculap { get; set; }
 
     }

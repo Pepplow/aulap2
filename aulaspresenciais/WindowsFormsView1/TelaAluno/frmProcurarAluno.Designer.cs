@@ -79,6 +79,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Name = "frmProcurarAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
