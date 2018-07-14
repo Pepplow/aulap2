@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controller.DAL;
 using Modelos;
 
 
@@ -10,19 +11,13 @@ namespace Controller
 {
     public class ProfessorController
     {
-        List<Professor> TabelaProfessor = new List<Professor>();
+        Contexto contexto = new Contexto();
 
-        public void inserir(Professor a)
+        public void inserirp(Professor novoProfessor)
         {
-            TabelaProfessor.Add(a);
-        }
-        public List<Professor> ListarTodos()
-        {
-            return TabelaProfessor; 
-        }
-        public void DeleteP(Professor a)
-        {
-            TabelaProfessor.Remove(a);
+            contexto.Professors.Add(novoProfessor);
+            contexto.SaveChanges();
+            //TabelaAlunos.Add(a);
         }
     }
 }

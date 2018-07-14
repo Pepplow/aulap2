@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsView1.TelaAluno;
 
+
 namespace WindowsFormsView1
 {
     public partial class MenuPrincipal : Form
@@ -30,5 +31,19 @@ namespace WindowsFormsView1
             frmListaAluno listaAlunos = new frmListaAluno();
             listaAlunos.Show();
         }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            frmProcurarAluno procaluno = new frmProcurarAluno();
+            procaluno.Show();
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            frmDeletarAluno delaluno = new frmDeletarAluno();
+            delaluno.Show();
+        }
+
+
     }
 }

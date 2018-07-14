@@ -35,11 +35,9 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -61,11 +59,29 @@
     <Compile Include="TelaAluno\frmCadastroAluno.Designer.cs">
       <DependentUpon>frmCadastroAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaAluno\frmDeletarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAluno\frmDeletarAluno.Designer.cs">
+      <DependentUpon>frmDeletarAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaAluno\frmListaAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaAluno\frmListaAluno.Designer.cs">
       <DependentUpon>frmListaAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAluno\frmProcurarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAluno\frmProcurarAluno.Designer.cs">
+      <DependentUpon>frmProcurarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAluno\frmResultadoProcura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAluno\frmResultadoProcura.Designer.cs">
+      <DependentUpon>frmResultadoProcura.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaDisciplina\frmCadastroDisciplina.cs">
       <SubType>Form</SubType>
@@ -78,12 +94,6 @@
     </Compile>
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TelaProfessor\frmCadastroProfessor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaProfessor\frmCadastroProfessor.Designer.cs">
-      <DependentUpon>frmCadastroProfessor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +112,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaAluno\frmDeletarAluno.resx">
+      <DependentUpon>frmDeletarAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaAluno\frmListaAluno.resx">
       <DependentUpon>frmListaAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAluno\frmProcurarAluno.resx">
+      <DependentUpon>frmProcurarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAluno\frmResultadoProcura.resx">
+      <DependentUpon>frmResultadoProcura.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -117,7 +136,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controller\Controllers.csproj">
@@ -128,6 +149,9 @@
       <Project>{b3a6fef8-0e38-4318-b5d1-9913bbcc8663}</Project>
       <Name>Modelos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TelaProfessor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

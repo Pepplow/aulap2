@@ -21,9 +21,8 @@ namespace WindowsFormsView1.TelaAluno
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            txtNome.Text = string.Empty;
-            txtMatricula.Text = string.Empty;
+        {          
+            Close();           
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -31,11 +30,15 @@ namespace WindowsFormsView1.TelaAluno
             Aluno novoAluno = new Aluno();
             novoAluno.Nome = txtNome.Text;
             novoAluno.Matricula = int.Parse(txtMatricula.Text);
+            
 
             AlunosController alunosController = new AlunosController();
             alunosController.inserir(novoAluno);
 
-            
+            txtNome.Text = string.Empty;
+            txtMatricula.Text = string.Empty;
+
+            MessageBox.Show("Aluno Cadastrado Com Sucesso!");
         }
         
     }

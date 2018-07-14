@@ -9,6 +9,8 @@ namespace Modelos
     public class Professor
     {
         public string nomep { get; set; }
+        public string cpf { get; set; }
         public int matriculap { get; set; }
+
     }
 }
