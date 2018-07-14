@@ -68,5 +68,11 @@ namespace WindowsFormsView1
             frmCadastroProfessor cadprof = new frmCadastroProfessor();
             cadprof.Show();
         }
+
+        private void btnListarP_Click(object sender, EventArgs e)
+        {
+            frmListaProfessor listprof = new frmListaProfessor();
+            listprof.Show();
+        }
     }
 }

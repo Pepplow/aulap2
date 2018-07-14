@@ -36,5 +36,10 @@ namespace WindowsFormsView1.TelaProfessor
 
 
         }
+
+        private void btnCancelarP_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

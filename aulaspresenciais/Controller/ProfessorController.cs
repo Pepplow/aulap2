@@ -17,7 +17,23 @@ namespace Controller
         {
             contexto.Professors.Add(novoProfessor);
             contexto.SaveChanges();
-            
         }
+
+        public List<Professor> ListarTodosP()
+        {
+            return contexto.Professors.ToList();
+        }
+        public Professor BuscarPorIDP(int IDProfessor)
+        {
+            return contexto.Professors.Find(IDProfessor);
+        }
+
+        public void ExcluirP(int IDProfessor)
+        {
+            Professor professor = BuscarPorIDP(IDProfessor);
+            contexto.Professors.Remove(professor);
+            contexto.SaveChanges();
+        }
+
     }
 }

@@ -110,6 +110,7 @@
             this.btnCancelarP.TabIndex = 7;
             this.btnCancelarP.Text = "Cancelar";
             this.btnCancelarP.UseVisualStyleBackColor = true;
+            this.btnCancelarP.Click += new System.EventHandler(this.btnCancelarP_Click);
             // 
             // frmCadastroProfessor
             // 
