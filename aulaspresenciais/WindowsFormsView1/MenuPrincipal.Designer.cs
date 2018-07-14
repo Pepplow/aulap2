@@ -116,6 +116,7 @@
             this.btnCadastrarP.Text = "Cadastrar";
             this.btnCadastrarP.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrarP.UseVisualStyleBackColor = true;
+            this.btnCadastrarP.Click += new System.EventHandler(this.btnCadastrarP_Click);
             // 
             // groupBox3
             // 

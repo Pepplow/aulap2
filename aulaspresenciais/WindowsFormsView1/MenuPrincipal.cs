@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsView1.TelaDisciplina;
 using WindowsFormsView1.TelaAluno;
-
+using WindowsFormsView1.TelaProfessor;
 
 namespace WindowsFormsView1
 {
@@ -61,6 +61,12 @@ namespace WindowsFormsView1
         {
             frmDeletarDisciplina deldisc = new frmDeletarDisciplina();
             deldisc.Show();
+        }
+
+        private void btnCadastrarP_Click(object sender, EventArgs e)
+        {
+            frmCadastroProfessor cadprof = new frmCadastroProfessor();
+            cadprof.Show();
         }
     }
 }

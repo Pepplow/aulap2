@@ -112,6 +112,12 @@
     <Compile Include="TelaDisciplina\frmListaDisciplina.Designer.cs">
       <DependentUpon>frmListaDisciplina.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaProfessor\frmCadastroProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaProfessor\frmCadastroProfessor.Designer.cs">
+      <DependentUpon>frmCadastroProfessor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="TelaAluno\frmCadastroAluno.resx">
       <DependentUpon>frmCadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaDisciplina\frmListaDisciplina.resx">
       <DependentUpon>frmListaDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaProfessor\frmCadastroProfessor.resx">
+      <DependentUpon>frmCadastroProfessor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
